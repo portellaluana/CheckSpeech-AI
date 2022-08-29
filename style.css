@@ -32,10 +32,20 @@ header {
   justify-items: center;
 }
 
+.container-nav {
+  top: 0;
+  left: 0;
+  height: 96px;
+  width: 100%;
+  position: fixed;
+  transition: background-color 0.5s ease-in-out;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   top: 0;
+  left: 0;
   height: 96px;
   align-items: center;
   border-bottom: solid 0.5px var(--brand-grey-line);
@@ -43,6 +53,10 @@ nav {
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
+}
+
+nav button {
+  display: none;
 }
 
 nav ul {
@@ -71,18 +85,15 @@ nav img {
 }
 
 header .destaque-header {
-  text-align: left;
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 12rem;
 }
 
 .paragrafo-destaque {
   margin-bottom: 2rem;
-}
-
-header .destaque-header h3 {
-  margin-top: 7rem;
+  max-width: 500px;
 }
 
 h1 {
@@ -246,10 +257,11 @@ section #solucoes {
 .solucoes-all li {
   list-style: none;
   padding: 20px;
+  width: 400px;
 }
 
 .solucoes-all li img {
-  width: 80px;
+  height: 80px;
 }
 
 /* ________________________PLANOS________________________ */
@@ -673,4 +685,195 @@ footer img {
   opacity: 0.5;
   font-size: 0.8rem;
   text-decoration: none;
+}
+
+@media screen and (max-width: 1100px) {
+  /* ____header____ */
+
+  header {
+    width: 100%;
+  }
+
+  header .btn-secundario {
+    display: none;
+  }
+
+  .destaque-header {
+    text-align: center;
+    width: 80%;
+  }
+
+  header ul {
+    display: block;
+    text-align: center;
+  }
+
+  header ul .cta {
+    display: none;
+  }
+
+  .container-header {
+    background-image: url(./assets/background-checkspeechai.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+  }
+
+  nav {
+    display: block;
+    width: 80%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: auto;
+  }
+
+  .menu-mobile {
+    justify-content: space-between;
+    display: flex;
+  }
+
+  nav button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+  }
+
+  nav button img {
+    width: 1rem;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: center;
+    height: 100vh;
+    text-align: right;
+    margin-top: 4rem;
+    display: none; /* menu mobile */
+    background-color: var(--brand-dark);
+  }
+
+  nav ul li {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .menu-open {
+    display: none;
+  }
+
+  /* ____cookies____ */
+  .container-cookies {
+    min-height: 35%;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .cookies {
+    display: block;
+    max-width: 50%;
+  }
+
+  .cookies {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .cookies p {
+    margin-bottom: 1rem;
+  }
+
+  .btn-cookies {
+    margin-left: 0;
+  }
+
+  /* ____soluções____ */
+
+  #solucoes .solucoes-title {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .solucoes-all {
+    display: block;
+    width: 100%;
+  }
+
+  .solucoes-all li {
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ____planos____ */
+
+  #planos .planos-title {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #planos ul {
+    display: block;
+  }
+
+  /* ____duvida____ */
+
+  #duvida {
+    margin-top: 5rem;
+    width: 100%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  /* ____clientes____ */
+  #clientes {
+    display: none;
+  }
+
+  /* ____contato____ */
+
+  .contato-title {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ____footer____ */
+
+  footer {
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  footer ul {
+    display: block;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  footer ul li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  footer ul li a:hover {
+    border: none;
+  }
+
+  .container-footer {
+    display: block;
+    text-align: center;
+  }
+
+  .icones-redes {
+    justify-items: center;
+    justify-content: center;
+  }
+
+  .icones-redes img {
+    width: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }

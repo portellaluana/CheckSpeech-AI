@@ -42,3 +42,17 @@ function moveRight() {
 }
 
 sliderClientes();
+
+const navHeader = document.querySelector(".container-nav");
+const scrollingNav = "50";
+const navFixed = document.querySelector("nav");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > scrollingNav) {
+    navHeader.style.backgroundColor = "var(--brand-dark)";
+    navFixed.style.borderBottom = "none";
+  } else {
+    navHeader.style.backgroundColor = "transparent";
+    navFixed.style.borderBottom = "solid 0.5px var(--brand-grey-line)";
+  }
+});

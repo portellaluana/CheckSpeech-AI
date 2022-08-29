@@ -14,27 +14,44 @@
 <body>
     <header>
         <div class="container-header">
-            <nav>
-                <a href="">
-                    <img src="./assets/checkSpeech.svg" alt="logo checkSpeech">
-                </a>
-                <ul class="nav-list">
-                    <li><a href="#solucoes">Soluções</a></li>
-                    <li><a href="#planos">Planos</a></li>
-                    <li><a href="#clientes">Clientes</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li><a href="#contato" class="cta">Conversar com especialista</a></li>
-                </ul>
-            </nav>
+            <div class="container-nav">
+                <nav>
+                    <div class="menu-mobile">
+                        <div>
+                            <a href="">
+                                <img src="./assets/checkSpeech.svg" alt="logo checkSpeech">
+                            </a>
+                        </div>
+                        <div>
+                            <button class="menu-close">
+                                <img src="./assets/menu-close.png" alt="">
+                            </button>
+                            <button class="menu-open">
+                                <img src="./assets/menu-open.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li><a href="#solucoes">Soluções</a></li>
+                        <li><a href="#planos">Planos</a></li>
+                        <li><a href="#clientes">Clientes</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#contato" class="cta">Conversar com especialista</a></li>
+                    </ul>
+
+                </nav>
+            </div>
             <div class="destaque-header">
                 <h3>Áudio em textos</h3>
                 <h1>Conversão de fala</h1>
-                <p class="paragrafo-destaque">Conjunto de APIs de conversão de fala em<br>textos, interpretação de sentimento dominante<br>nos dizeres. Solução treinada em mais de 500.000<br>horas de áudios, transcritos por humanos de uma<br>ampla variedade de idades, nacionalidades,<br>sotaques e níveis de instruções.</p>
+                <p class="paragrafo-destaque">Conjunto de APIs de conversão de fala em textos, interpretação de sentimento dominante nos dizeres. Solução treinada em mais de 500.000 horas de áudios, transcritos por humanos de uma ampla variedade de idades, nacionalidades, sotaques e níveis de instruções.</p>
                 <div>
                     <a href="#contato" class="cta">Conversar com especialista</a>
                     <a href="#solucoes" class="btn-secundario">Ver mais</a>
                 </div>
             </div>
+
         </div>
         <div class="container-cookies">
             <div class="cookies">
@@ -54,22 +71,22 @@
                 <li>
                     <img src="./assets/transcricao-audio-assincrono-icone.png" alt="ícone solução checkSpeech">
                     <h4>Transcrição de Áudio Assíncrono</h4>
-                    <p>API de transcrição de voz assíncrona para<br>áudio pré-gravado. Temos uma das melhores<br>engines de reconhecimento de fala.</p>
+                    <p>API de transcrição de voz assíncrona para áudio pré-gravado. Temos uma das melhores engines de reconhecimento de fala.</p>
                 </li>
                 <li>
                     <img src="./assets/identificacao-idiomas-audio-icone.png" alt="ícone solução checkSpeech">
                     <h4>Identificação de Idiomas em áudios</h4>
-                    <p>Obtendo fala e insights a nível global.<br>Nossa solução tem suporte a 52 idiomas.</p>
+                    <p>Obtendo fala e insights a nível global. Nossa solução tem suporte a 52 idiomas.</p>
                 </li>
                 <li>
                     <img src="./assets/transcricao-audio-tempo-real-icone.png" alt="ícone solução checkSpeech">
                     <h4>Transcrição de Áudio em tempo real</h4>
-                    <p>O recurso live-speech-to-text de transcrição<br>ao vivo possibilita o uso de legendas em<br>tempo real para o seu negócio.</p>
+                    <p>O recurso live-speech-to-text de transcrição ao vivo possibilita o uso de legendas em tempo real para o seu negócio.</p>
                 </li>
                 <li>
                     <img src="./assets/analise-sentimento-audio-icone.png" alt="ícone solução checkSpeech">
                     <h4>Análise de sentimento a partir do áudio</h4>
-                    <p>Encontre os momentos mais importantes em<br>trechos de falas, diferencie falas positivas e<br>negativas e tome decisões mais assertivas.</p>
+                    <p>Encontre os momentos mais importantes em trechos de falas, diferencie falas positivas e negativas e tome decisões mais assertivas.</p>
                 </li>
             </ul>
         </section>
@@ -470,7 +487,7 @@
                     <label for="concordo" class="radio-btn">Eu concordo com a Política de Privacidade.</label>
                 </div>
 
-                <button class="btn-enviar">Enviar</button>
+                <button class="btn-enviar">Enviar</button> <!-- ativar com radio clicado -->
             </div>
         </section>
     </main>
