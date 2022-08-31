@@ -8,6 +8,7 @@
     <title>CheckSpeech AI</title>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
+    <!-- FAVICON -->
 
 </head>
 
@@ -16,31 +17,40 @@
         <div class="container-header">
             <div class="container-nav">
                 <nav>
-                    <div class="menu-mobile">
-                        <div>
-                            <a href="">
-                                <img src="./assets/checkSpeech.svg" alt="logo checkSpeech">
-                            </a>
-                        </div>
-                        <div>
-                            <button class="menu-close">
-                                <img src="./assets/menu-close.png" alt="">
-                            </button>
-                            <button class="menu-open">
-                                <img src="./assets/menu-open.png" alt="">
-                            </button>
-                        </div>
+                    <div>
+                        <a href="">
+                            <img src="./assets/checkSpeech.svg" alt="logo checkSpeech">
+                        </a>
                     </div>
 
-                    <ul>
-                        <li><a href="#solucoes">Soluções</a></li>
-                        <li><a href="#planos">Planos</a></li>
-                        <li><a href="#clientes">Clientes</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                        <li><a href="#contato" class="cta">Conversar com especialista</a></li>
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#solucoes" class="nav-link">Soluções</a></li>
+                        <li class="nav-item"><a href="#planos" class="nav-link">Planos</a></li>
+                        <li class="nav-item"><a href="#clientes" class="nav-link">Clientes</a></li>
+                        <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                        <div class="login-btn">
+                            <a href="#contato" class="cta">Conversar com especialista</a>
+                        </div>
                     </ul>
 
+
+                    <div class="mobile-menu-icon">
+                        <button onclick="menuShow()">
+                            <img class="icon-menu" src="./assets/menu-close.png" alt="">
+                        </button>
+                    </div>
                 </nav>
+                <div class="mobile-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#solucoes" class="nav-link">Soluções</a></li>
+                        <li class="nav-item"><a href="#planos" class="nav-link">Planos</a></li>
+                        <li class="nav-item"><a href="#clientes" class="nav-link">Clientes</a></li>
+                        <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                    </ul>
+                    <div class="login-btn">
+                        <a href="#contato" class="cta">Conversar com especialista</a>
+                    </div>
+                </div>
             </div>
             <div class="destaque-header">
                 <h3>Áudio em textos</h3>
@@ -51,16 +61,8 @@
                     <a href="#solucoes" class="btn-secundario">Ver mais</a>
                 </div>
             </div>
-
-        </div>
-        <div class="container-cookies">
-            <div class="cookies">
-                <p><strong>Nós usamos cookies.</strong> Eles são usados para aprimorar sua experiência. Ao aceitar você concorda com o uso de cookies. <span>Saiba mais</span></p>
-                <button class="btn-cookies">Aceitar</button>
-            </div>
         </div>
     </header>
-
     <main>
         <section id="solucoes">
             <div class="solucoes-title">
@@ -224,10 +226,10 @@
             <div class="container-form">
 
                 <label for="nome">Nome*</label><br>
-                <input type="text" id="nome" required><br>
+                <input type="text" id="nome" class="required" required onchange="checkRequired()"><br>
 
                 <label for="email">Email*</label><br>
-                <input type="email" id="email" required><br>
+                <input type="email" id="email" class="required" required onchange="checkRequired()"><br>
 
                 <div class="telefone">
                     <div>
@@ -483,11 +485,11 @@
                 </div>
 
                 <div class="container-radio">
-                    <input type="radio" id="concordo" value="concordo">
+                    <input type="radio" id="concordo" disabled="disabled" onclick="habilitar()">
                     <label for="concordo" class="radio-btn">Eu concordo com a Política de Privacidade.</label>
                 </div>
 
-                <button class="btn-enviar">Enviar</button> <!-- ativar com radio clicado -->
+                <button class="btn-enviar" disabled="disabled">Enviar</button>
             </div>
         </section>
     </main>
@@ -520,6 +522,12 @@
             </div>
         </div>
     </footer>
+    <div class="container-cookies">
+        <div class="cookies">
+            <p><strong>Nós usamos cookies.</strong> Eles são usados para aprimorar sua experiência. Ao aceitar você concorda com o uso de cookies. <span>Saiba mais</span></p>
+            <button class="btn-cookies">Aceitar</button>
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 

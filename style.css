@@ -35,10 +35,10 @@ header {
 .container-nav {
   top: 0;
   left: 0;
-  height: 96px;
+  height: 5.5rem;
   width: 100%;
   position: fixed;
-  transition: background-color 0.5s ease-in-out;
+  /* transition: background-color 0.5s ease-in-out; */
 }
 
 nav {
@@ -46,13 +46,22 @@ nav {
   justify-content: space-between;
   top: 0;
   left: 0;
-  height: 96px;
+  height: 6rem;
+
   align-items: center;
   border-bottom: solid 0.5px var(--brand-grey-line);
   z-index: 1;
-  max-width: 1080px;
+  width: 1080px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
 }
 
 nav button {
@@ -69,7 +78,6 @@ nav ul li a {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   padding: 12px 12px;
-  margin: 0 4px;
   cursor: pointer;
   text-decoration: none;
   color: white;
@@ -364,7 +372,7 @@ section #planos {
   padding: 0.8rem 4rem;
 }
 
-.btn-contratar:disabled {
+button:disabled {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   font-size: 0.9rem;
@@ -703,62 +711,72 @@ footer img {
     width: 80%;
   }
 
-  header ul {
-    display: block;
-    text-align: center;
-  }
-
-  header ul .cta {
+  .nav-item {
     display: none;
   }
 
-  .container-header {
-    background-image: url(./assets/background-checkspeechai.png);
-    background-size: cover;
-    background-position: top center;
-    position: relative;
+  .login-btn {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .mobile-menu {
+    background-color: var(--brand-dark);
+    height: 100vh;
+    text-align: center;
+    width: 100%;
+  }
+
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .mobile-menu ul li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .mobile-menu .nav-item {
+    display: block;
+    padding-top: 3rem;
+  }
+
+  .mobile-menu .login-btn {
+    display: block;
+    margin-top: 2rem;
+  }
+
+  .mobile-menu .login-btn button {
+    width: 100%;
+  }
+
+  .open {
+    display: block;
   }
 
   nav {
-    display: block;
+    display: flex;
     width: 80%;
     padding-top: 2rem;
     padding-bottom: 2rem;
     height: auto;
   }
 
-  .menu-mobile {
-    justify-content: space-between;
-    display: flex;
-  }
-
   nav button {
-    display: flex;
+    display: block;
     background-color: transparent;
     border: none;
+    cursor: pointer;
   }
 
   nav button img {
     width: 1rem;
-  }
-
-  nav ul {
-    width: 100%;
-    justify-content: center;
-    height: 100vh;
-    text-align: right;
-    margin-top: 4rem;
-    display: none; /* menu mobile */
-    background-color: var(--brand-dark);
-  }
-
-  nav ul li {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .menu-open {
-    display: none;
   }
 
   /* ____cookies____ */
@@ -820,14 +838,33 @@ footer img {
   /* ____duvida____ */
 
   #duvida {
-    margin-top: 5rem;
     width: 100%;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
+
+  #duvida h2 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #duvida p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   /* ____clientes____ */
-  #clientes {
-    display: none;
+
+  #clientes .clientes-title {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .clientes-logos {
+    width: 100%;
+    overflow: hidden;
   }
 
   /* ____contato____ */

@@ -56,3 +56,40 @@ window.addEventListener("scroll", function () {
     navFixed.style.borderBottom = "solid 0.5px var(--brand-grey-line)";
   }
 });
+
+function menuShow() {
+  const navHeader = document.querySelector(".container-nav");
+  let menuMobile = document.querySelector(".mobile-menu");
+  if (menuMobile.classList.contains("open")) {
+    menuMobile.classList.remove("open");
+    document.querySelector(".icon-menu").src = "assets/menu-close.png";
+    navHeader.style.backgroundColor = "transparent";
+  } else {
+    menuMobile.classList.add("open");
+    document.querySelector(".icon-menu").src = "assets/menu-open.png";
+    navHeader.style.backgroundColor = "var(--brand-dark)";
+  }
+
+  menuMobile.addEventListener("click", function () {
+    menuMobile.classList.remove("open");
+    document.querySelector(".icon-menu").src = "assets/menu-close.png";
+  });
+}
+
+let radioBtn = document.getElementById("concordo");
+let inputNome = document.getElementById("nome");
+let inputEmail = document.getElementById("email");
+
+function inputsPreenchidos() {
+  return inputNome.value.length >= 1 && inputEmail.value.length >= 1;
+}
+
+function checkRequired() {
+  radioBtn.disabled = !inputsPreenchidos();
+}
+
+function habilitar() {
+  let botaoEnviar = document.querySelector(".btn-enviar");
+
+  botaoEnviar.disabled = !radioBtn.checked;
+}
