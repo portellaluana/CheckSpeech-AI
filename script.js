@@ -76,7 +76,9 @@ function menuShow() {
   });
 }
 
-let radioBtn = document.getElementById("concordo");
+let checkbox = document.getElementById("concordo");
+let botaoEnviar = document.querySelector(".btn-enviar");
+
 let inputNome = document.getElementById("nome");
 let inputEmail = document.getElementById("email");
 
@@ -85,11 +87,9 @@ function inputsPreenchidos() {
 }
 
 function checkRequired() {
-  radioBtn.disabled = !inputsPreenchidos();
+  checkbox.disabled = !inputsPreenchidos();
 }
 
-function habilitar() {
-  let botaoEnviar = document.querySelector(".btn-enviar");
-
-  botaoEnviar.disabled = !radioBtn.checked;
+function habilitaCheckbox() {
+  botaoEnviar.disabled = !checkbox.checked;
 }

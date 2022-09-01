@@ -8,7 +8,7 @@
     <title>CheckSpeech AI</title>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
-    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
 
 </head>
 
@@ -226,10 +226,10 @@
             <div class="container-form">
 
                 <label for="nome">Nome*</label><br>
-                <input type="text" id="nome" class="required" required onchange="checkRequired()"><br>
+                <input type="text" id="nome" required onchange="checkRequired()"><br>
 
                 <label for="email">Email*</label><br>
-                <input type="email" id="email" class="required" required onchange="checkRequired()"><br>
+                <input type="email" id="email" required onchange="checkRequired()"><br>
 
                 <div class="telefone">
                     <div>
@@ -484,9 +484,9 @@
                     <textarea name="mensagem" id="mensagem" rows="5"></textarea>
                 </div>
 
-                <div class="container-radio">
-                    <input type="radio" id="concordo" disabled="disabled" onclick="habilitar()">
-                    <label for="concordo" class="radio-btn">Eu concordo com a Política de Privacidade.</label>
+                <div class="container-checkbox">
+                    <input type="checkbox" id="concordo" disabled="disabled" onclick="habilitaCheckbox()">
+                    <label for="concordo" class="checkbox-btn">Eu concordo com a Política de Privacidade.</label>
                 </div>
 
                 <button class="btn-enviar" disabled="disabled">Enviar</button>

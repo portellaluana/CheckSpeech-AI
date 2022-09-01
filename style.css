@@ -38,7 +38,7 @@ header {
   height: 5.5rem;
   width: 100%;
   position: fixed;
-  /* transition: background-color 0.5s ease-in-out; */
+  transition: background-color 0.5s ease-in-out;
 }
 
 nav {
@@ -597,9 +597,11 @@ select {
   height: 1.8rem;
 }
 
-.container-radio {
+.container-checkbox {
   display: flex;
-  width: 100%;
+  width: 400px;
+
+  align-items: center;
 }
 
 #concordo {
@@ -607,13 +609,14 @@ select {
   margin-right: 0.5rem;
 }
 
-.radio-btn {
+.checkbox-btn {
+  padding-bottom: 1rem;
   font-size: 0.8rem;
 }
 
 input[type="checkbox"] {
   position: absolute;
-  opacity: 0;
+  opacity: 100;
 }
 
 input[type="checkbox"] + label {
@@ -633,6 +636,7 @@ input[type="checkbox"] + label {
   border-radius: 100px;
   padding: 0.8rem 4rem;
   width: 100%;
+  cursor: pointer;
 }
 
 /* ________________________FOOTER________________________ */
